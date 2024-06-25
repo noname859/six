@@ -1,113 +1,108 @@
 import Image from "next/image";
-
+import titleimg from "../app/images/title.png";
+const people = [
+  { number: 2028, name: "מעיין רבינוביץ" },
+  { number: 2029, name: "איתי וויס" },
+  { number: 2030, name: "אלון מוטולה" },
+  { number: 2031, name: "אמיתה דרור" },
+  { number: 2032, name: "בר דמרי" },
+  { number: 2033, name: "דן דיליון" },
+  { number: 2034, name: "זוהרה סטרשנוב" },
+  { number: 2035, name: "לוטם דגני" },
+  { number: 2036, name: "ליאור קיין" },
+  { number: 2037, name: "ליה קרלין" },
+  { number: 2038, name: "נויה לאופר" },
+  { number: 2039, name: "נועה יפה" },
+  { number: 2040, name: "קשת מויאל" },
+  { number: 2041, name: "זיו קלמוביץ" },
+  { number: 2042, name: "חן קומפל" },
+  { number: 2043, name: "יונתן פיינר" },
+  { number: 2044, name: "דנה פיטרמן" },
+  { number: 2045, name: "יאיר וולנסקי" },
+  { number: 2046, name: "עומר שמיוביץ" },
+  { number: 2047, name: "גל צוקרמן" },
+  { number: 2048, name: "שי יחזקאל" },
+  { number: 2049, name: "תו שגיא" },
+  { number: 2050, name: "מעין שלם" },
+  { number: 2051, name: "ענבר הרפז" },
+  { number: 2052, name: "רעות בוכבוט" },
+  { number: 2053, name: "שגב מגל" },
+  { number: 2054, name: "אלעד וורוצלבסקי" },
+  { number: 2055, name: "טל סעדה" },
+  { number: 2056, name: "רפא טורקניץ" },
+  { number: 2057, name: "ענבל יאשי" },
+  { number: 2058, name: "אורן לב" },
+  { number: 2059, name: "חוליאן זוקר" },
+  { number: 2060, name: "ירין צרפתי" },
+  { number: 2061, name: "טל הרגס" },
+  { number: 2062, name: "גבי אלבז" },
+  { number: 2063, name: "אורי שרף" },
+  { number: 2064, name: "גל דגני" },
+  { number: 2065, name: "פז בניאש" },
+  { number: 2066, name: "עידו בירנבוים" },
+  { number: 2067, name: "תמר הלוי" },
+  { number: 2068, name: "ענבר כרמי" },
+  { number: 2069, name: "עפרי בייבה" },
+  { number: 2070, name: "ליאם מלכי" },
+  { number: 2071, name: "רומי ברהום" },
+  { number: 2072, name: "מישה חובייב" },
+  { number: 2073, name: "שקד גסנר" },
+  { number: 2074, name: "תמר ארגוב" },
+  { number: 2075, name: "אמיר עוז" },
+  { number: 2076, name: "ליבי רגבים" },
+  { number: 2077, name: "עליסה שפוליאנסקי" },
+  { number: 2078, name: "נועה פריד" },
+  { number: 2079, name: "מעין חדוותי" },
+  { number: 2080, name: "שחר אולסוונג" },
+  { number: 2081, name: "יואל ציקמן" },
+  { number: 2082, name: "אריקה דובין" },
+  { number: 2083, name: "גני למפל" },
+  { number: 2084, name: "יהלי אביב" },
+  { number: 2085, name: "טל כרמונה" },
+  { number: 2086, name: "גל ירון" },
+  { number: 2087, name: "נועם אלימלך" },
+  { number: 2088, name: "שקד תומר" },
+  { number: 2089, name: "אורי תדמור" },
+  { number: 2090, name: "יורי חיים" },
+  { number: 2091, name: "רוני דוסטאר" },
+  { number: 1944, name: "מיטל שחר" },
+  { number: 1945, name: "שירן קורן" },
+  { number: 1946, name: "אדם לטרולו" }
+];
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
+    <div className="bg-[#272660] text-white grid justify-center items-center h-screen w-full overflow-auto m-0 pt-16">
+      <img src={titleimg.src} alt="" className="w-[700px] h-[200px]" />
+
+      <div className=" p-8 rounded-lg shadow-lg font-bold w-full ">
+        <h1 className=" text-4xl mb-4 max-w-[600px]">הרחבת המחנה, הקמת בית הליברלי הגדול, החלפת הממשלה.</h1>
+        <br />
+        <p className="mb-2">הבחירות לוועידה יתקיימו מחר ה- 26.6.24, באופן דיגיטלי ומהבית.</p>
+        <br />
+        <p className="mb-2">כל חברי המפלגה בעלי זכות הצבעה במחוז שלהם</p>
+        <br />
+        <p className="mb-2">ברשימה מטה מופיעים פרטי כל המומלצים של המחוז שלנו.</p>
+        <br />
+        <p className="mb-2">מומלץ להשתמש במחשב לתהליך הבחירה (לעומת נייד שמסורבל יותר).</p>
+        <br />
+        <p className=" mb-4 max-w-[520px]">
+          הצבעת המתפקד כך:
+          <br />1. תשלח לכם הודעה SMS עם לינק להצבעה דיגיטלית.
+          <br />2. פתחו את (טאב) הקישור על המחשב, והעתיקו את מספרי המועמדים או השמות למערכת ההצבעה.
+          <br />3. לאחר שתבחרו את מינימום האנשים במחוז שלכם, יופיע כפתור אישור הצבעה.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <h2 className="text-xl mb-4">המועמדים המומלצים ע"י מחוז דרום הם:</h2>
+        <div className="form-group mb-4 w-fit ">
+          {people.map((person) => (
+            <div className="flex gap-x-2">
+              <p>{person.number}</p>
+              <p>-</p>
+              <p>{person.name}</p>
+            </div>
+          ))}
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
